@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "purple-medium": "#6340bc",
+              "purple-light": "#794ee6",
+              black: "#090612",
+              "purple-darker": "#20153c",
+              "purple-dark": "#362367",
+              purple: "#4d3291",
+              gold: "#d9a760",
+              "gold-light": "#ffedd5",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Home | Barnhill Programming</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-slate-950">
+    <header class="">
+      <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        >
+          <a href="/" class="flex items-center">
+            <img
+              alt="A logo image of a skull"
+              src="images/barnhill.png"
+              height="40"
+              width="40"
+            />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap text-white pl-2"
+              >Barnhill Programming</span
+            >
+          </a>
+          <div class="flex items-center">
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="hidden justify-between items-end w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 pr-4 pl-3 text-center text-white rounded bg-transparent hover:text-white hover:bg-purple"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/coaching"
+                  class="block py-2 pr-4 pl-3 text-center text-white rounded bg-transparent hover:text-white hover:bg-purple"
+                  aria-current="page"
+                  >Coaching</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/webdev"
+                  class="block py-2 pr-4 pl-3 text-center text-white rounded bg-transparent hover:text-white hover:bg-purple"
+                  aria-current="page"
+                  >Web Deveopment</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex justify-center bg-slate-900 text-white flex-grow">
+      <div class="max-w-prose">
+        <h1 class="p-4 text-center text-2xl font-extrabold text-gold md:p-6">
+          Barnhill Programming
+        </h1>
+        <p class="p-4 indent-8 text-lg md:p-6">
+          Welcome to Barnhill Programming, where I offer both remote personal
+          training and website building services under one roof. Whether you're
+          looking to get in shape or build a strong online presence, I've got
+          you covered. I am dedicated to helping you achieve your goals and make
+          your vision a reality. Let me help you unlock your full potential and
+          take your life and business to the next level.
+        </p>
+        <div class="flex flex-col items-center justify-center">
+          <a href="/coaching">
+            <div
+              class="flex items-center flex-col m-4 max-w-sm rounded-lg border border-gray-200 bg-white shadow"
+            >
+              <img
+                src="images/weights.png"
+                alt="A barbell icon"
+                class="m-2 h-16 w-16 text-black"
+              />
+              <div class="p-5 pt-3">
+                <h2
+                  class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900"
+                >
+                  Personal Programming
+                </h2>
+                <p class="mb-3 font-normal text-gray-900">
+                  Learn more about my personal programming options here
+                </p>
+                <div
+                  class="inline-flex items-center justify-center rounded-lg bg-gold px-3 py-2 text-center text-sm font-medium text-black hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                >
+                  Learn about Personal Programming
+                  <svg
+                    aria-hidden="true"
+                    class="ml-2 -mr-1 h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/webdev">
+            <div
+              class="flex items-center flex-col m-4 max-w-sm rounded-lg border border-gray-200 bg-white shadow"
+            >
+              <img
+                src="images/web.png"
+                alt="A website layout icon"
+                class="m-2 h-16 w-16 text-black"
+              />
+              <div class="p-5 pt-3">
+                <h2
+                  class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900"
+                >
+                  Web Development
+                </h2>
+                <p class="mb-3 font-normal text-gray-900">
+                  Learn more about my website development options here
+                </p>
+                <div
+                  class="inline-flex items-center justify-center rounded-lg bg-gold px-3 py-2 text-center text-sm font-medium text-black hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                >
+                  Learn about Web Development
+                  <svg
+                    aria-hidden="true"
+                    class="ml-2 -mr-1 h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="pb-4">
+          <ContactForm />
+        </div>
+      </div>
+    </main>
+    <footer class="flex bg-black w-full p-4 md:p-6 justify-center min-h-[5vh]">
+      <span class="text-slate-400"
+        >&copy; 2023 Blake Barnhill. All rights reserved.</span
+      >
+    </footer>
+  </body>
+</html>
